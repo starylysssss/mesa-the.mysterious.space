@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mysterious Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Star Cursor Canvas -->
+    <canvas id="star-cursor"></canvas>
+
+    <div class="galaxy-bg"></div>
+
+    <header>
+        <h1 class="main-title">The Mysterious Space</h1>
+        <p class="subtitle">Abandoned But Not Forgotten: Voyage into the Cosmic Silence</p>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>In Search of Silent Explorers</h2>
+            <p>Discover historical artificial objects left behind in the deep cosmos and celestial bodies. Click on the cards to explore their details and visuals!</p>
+        </section>
+
+        <section class="hardware-grid">
+            <!-- 1. Lost Lunar Rover Prototypes -->
+            <article class="card" onclick="openModal('prototypes')">
+                <span class="badge earth">1965 - Earth</span>
+                <h3 class="card-title">Lost Lunar Rover Prototypes</h3>
+                <p class="card-preview">Tested on Earth's analog sites, these early 'wheeled' designs helped develop the Apollo LRV.</p>
+                <span class="click-hint">Click to inspect ✦</span>
+            </article>
+
+            <!-- 2. Ranger 4 Probe -->
+            <article class="card" onclick="openModal('ranger4')">
+                <span class="badge lunar">1962 - Moon</span>
+                <h3 class="card-title">Ranger 4 Probe</h3>
+                <p class="card-preview">The first US spacecraft to impact another celestial body, Ranger 4's systems failed before impact.</p>
+                <span class="click-hint">Click to inspect ✦</span>
+            </article>
+
+            <!-- 3. Apollo 10 Snoopy -->
+            <article class="card" onclick="openModal('snoopy')">
+                <span class="badge lunar">1969 - Solar Orbit</span>
+                <h3 class="card-title">Apollo 10 Lunar Module 'Snoopy'</h3>
+                <p class="card-preview">The only crewed spacecraft component left in heliocentric orbit after a successful test run.</p>
+                <span class="click-hint">Click to inspect ✦</span>
+            </article>
+
+            <!-- 4. Lunar Prospector -->
+            <article class="card" onclick="openModal('prospector')">
+                <span class="badge lunar">1999 - Moon</span>
+                <h3 class="card-title">Lunar Prospector</h3>
+                <p class="card-preview">A historic mission that confirmed water ice evidence before intentionally crashing to study the surface.</p>
+                <span class="click-hint">Click to inspect ✦</span>
+            </article>
+
+            <!-- 5. MAPP & Athena -->
+            <article class="card" onclick="openModal('mapp')">
+                <span class="badge lunar">2025 - Moon</span>
+                <h3 class="card-title">MAPP & Athena Rovers</h3>
+                <p class="card-preview">Autonomous commercial missions designed for mapping and water ice prospecting on the Lunar South Pole.</p>
+                <span class="click-hint">Click to inspect ✦</span>
+            </article>
+
+            <!-- 6. Lunar Trailblazer -->
+            <article class="card" onclick="openModal('trailblazer')">
+                <span class="badge lunar">2025 - Lunar Orbit</span>
+                <h3 class="card-title">Lunar Trailblazer Orbiter</h3>
+                <p class="card-preview">A high-tech satellite mapping specific water signatures and distribution patterns on the Moon[cite: 19].</p>
+                <span class="click-hint">Click to inspect ✦</span>
+            </article>
+        </section>
+    </main>
+
+    <!-- Detail Modal -->
+    <div id="detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Spacecraft Image">
+                <div class="modal-text">
+                    <span id="modal-badge" class="badge"></span>
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>The Mysterious Space &bull; NASA Space Apps Challenge &bull; <span class="mesa-tag">MESA</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
